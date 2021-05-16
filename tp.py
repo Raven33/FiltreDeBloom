@@ -48,7 +48,6 @@ def test(i):
     for j in range(HashFnctRange[0],HashFnctRange[1]+1):
         bloomFilter = [False]*i
         thetas = [generateTheta() for _ in range(j)]
-        print(thetas)
         for a in primingDataset: #priming bloom filter
             for b in thetas:
                 index = hash(a,b,i)
