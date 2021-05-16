@@ -11,7 +11,7 @@ filterSizeRange = (100,1000)
 HashFnctRange = (2,8)
 wordSize = (2,16) #min and max word size
 thetaSeeds = (0.6180,0.3819) #seeds for generating thetas
-primingDatasetSize = 10
+primingDatasetSize = 1000
 testDatasetSize = 1000
 
 #Generate datasets for priming and testing
@@ -62,7 +62,7 @@ def test(i):
             if test:
                 nbFalsePositive +=1 
 
-        resultString += str(nbFalsePositive) + ", " 
+        resultString += str(nbFalsePositive/testDatasetSize) + ", " 
 
     return resultString
 
